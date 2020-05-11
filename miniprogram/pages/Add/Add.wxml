@@ -1,0 +1,78 @@
+<!--miniprogram/pages/Add/Add.wxml-->
+<!-- <view class="accredit" wx:if="{{isHide}}">
+	<view wx:if="{{canIUse}}">
+		<view class='header'>
+			<image src='cloud://sx-tally-y1ou0.7378-sx-tally-y1ou0-1301841139/chart_file/log.jpg' class="auto-img" mode="widthFix"></image>
+		</view>
+
+		<view class='content'>
+			<view>申请获取以下权限</view>
+			<text>获得你的公开信息(昵称，头像等)</text>
+		</view>
+
+		<button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+			授权登录
+		</button>
+	</view>
+	<view wx:else>请升级微信版本</view>
+</view> -->
+
+<!-- <view wx:else> -->
+	<view class="add-account">
+		<view class="account-top">
+			<view class="cut-box">
+				<view class="fl type {{item.isActive?'active':''}}" wx:for="{{type}}" data-typename="type" wx:key="index" bindtap="cutType" data-active="{{item.isActive}}" data-index="{{index}}">{{item.name}}</view>
+			</view>
+		</view>
+		<view class="account-bottom">
+
+			<!-- banner -->
+			<view class="swiper">
+				<swiper class="swiper-box">
+					<block>
+						<swiper-item class="block">
+							<view class="swiper-item clear">
+								<view class="list fl {{item.isActive?'active':''}}" wx:for="{{bookKeepingData}}" wx:key="index" data-id="{{item._id}}" data-active="{{item.isActive}}" data-index="{{index}}" data-typename="bookKeepingData" bindtap="cutType">
+									<view class="list-img">
+										<image class="auto-img " src="{{item.url}}" mode="heightFix" mode="widthFix"></image>
+									</view>
+									<view class="list-text">{{item.title}}</view>
+								</view>
+							</view>
+						</swiper-item>
+					</block>
+				</swiper>
+			</view>
+
+			<!-- 账户选择 -->
+			<view class="account-type">
+				<view class="account-title">
+					<view>账户选择</view>
+				</view>
+				<view class="account-tab clear">
+					<view class="fl item-tab  {{item.isActive?'account-active':''}}" wx:for="{{accountData}}" wx:key="index" bindtap="cutType" data-typename="accountData" data-active="{{item.isActive}}" data-index="{{index}}">{{item.title}}</view>
+				</view>
+			</view>
+
+			<!-- 记账 -->
+			<view class="change-account">
+				<view class="check-time">
+					<picker class="clear" mode="date" value="{{date}}" start="{{opitionDate.start}}" end="{{opitionDate.end}}" bindchange="bindDateChange">
+						<view class="remark fl">记账日期:<input class="weui-input fr" value="{{bookkeepingDetail.time}}" placeholder="选择记账日期" disabled /></view>
+					</picker>
+				</view>
+				<view class="account-remark clear">
+					<view class="fl remark">添加备注:<input class="weui-input fr" value="{{bookkeepingDetail.remark}}" data-name="remark" auto-focus placeholder="添加记账备注" bindchange="getInfo" /></view>
+				</view>
+				<view class="money clear">
+					<view class="remark fl">记账金额:<input class="weui-input fr" value="{{bookkeepingDetail.money}}" data-name="money" type="digit" placeholder="添加记账金额" bindchange="getInfo" /></view>
+				</view>
+			</view>
+
+			<!-- 提交 -->
+			<view class="submit" bindtap="selectBookkeepType">
+				保存账目
+			</view>
+		</view>
+	</view>
+<!-- </view> -->

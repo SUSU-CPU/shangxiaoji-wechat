@@ -1,0 +1,42 @@
+<!--miniprogram/pages/My/My.wxml-->
+<view class="myData">
+    <view class="header">
+      <view class="user-img">
+      <view class="img">
+          <image src="{{userInfo.avatarUrl}}" class="auto-img"></image>
+      </view>
+      </view>
+      <view class="user-name">{{userInfo.nickName}}</view>
+    </view>
+    <view class="user-operate">
+      <view class="operate-list">
+        <view class="list-item" wx:for="{{operateData}}" wx:key="index">
+          <view class="list-count">{{item.count}}</view>
+          <view class="list-title">{{item.text}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="user-bottom">
+      <view class="sign-in clear" bindtap="popWindow">
+        <text class="fl sign-text" >今日打卡</text>
+        <view class="fr sign-icon">
+          <image src="cloud://sx-tally-y1ou0.7378-sx-tally-y1ou0-1301841139/chart_file/jiantou.png" class="auto-img" mode="widthFix"></image>
+        </view>
+      </view>
+      <view class="sign-in clear" bindtap="goOrderPage">
+        <text class="fl sign-text">账单列表</text>
+        <view class="fr sign-icon">
+          <image src="cloud://sx-tally-y1ou0.7378-sx-tally-y1ou0-1301841139/chart_file/jiantou.png" class="auto-img" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+    <view class="pop-window" style="opacity:{{opacity}};z-index:{{opacity - 1}}" bindtap="offPopWindow">
+      <view class="pop-box">
+        <view class="title">今日打卡</view>
+        <view class="button">
+          <view class="btn off" bindtap="offPopWindow">取消</view>
+          <view class="btn confirm" bindtap="addPunchTime">确认</view>
+        </view>
+      </view>
+    </view>
+</view>

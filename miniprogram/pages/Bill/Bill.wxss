@@ -1,0 +1,162 @@
+/* miniprogram/pages/Bill/Bill.wxss */
+.Bill{
+  width:100%;
+  height:100%;
+  background:#fff;
+}
+.nav{
+  width:calc(100% - 20rpx);
+  height:100rpx;
+  padding:20rpx;
+  background:#19ab83;
+}
+.nav-box{
+  width:400rpx;
+  height:100%;
+  margin:0 auto;
+  display: flex;
+  text-align: center;
+  line-height: 100rpx;
+}
+.mouth-bill,.year-bill{
+  width:50%;
+  color:#fff;
+  /* opacity: .8; */
+  font-size:30rpx;
+}
+.nav-text{
+  opacity: .8;
+  padding-bottom:15rpx;
+}
+.nav-box .active{
+  opacity:1;
+  border-bottom:2px solid #fff;
+}
+.bill-data{
+  width:calc(100% - 40rpx);
+  padding:20rpx;
+  background-color:#19ab83;
+}
+.bill-type{
+  width:100%;
+  color:#fff;
+  height:100rpx;
+  line-height: 100rpx;
+}
+.check-time .time-icon{
+  display: inline-block;
+  border-top:10rpx solid #fff;
+  border-left:10rpx solid transparent;
+  border-bottom:10rpx solid transparent;
+  border-right:10rpx solid transparent;
+  position: relative;
+  top:5rpx;
+  left:10rpx;
+}
+.check-type{
+  width:300rpx;
+  display: flex;
+  height:100%;
+  text-align: center;
+  line-height: 100rpx;
+}
+.type-title{
+  width:50%;
+  height:100%;
+}
+.type-title .active{
+  border-color:#fff;
+  opacity: 1;
+}
+.type-name{
+  padding:3rpx 20rpx;
+  border:1px solid transparent;
+  border-radius:20rpx;
+  font-size:27rpx;
+  opacity: .8;
+}
+.bill-total{
+  width:100%;
+}
+.total-title{
+  font-size:28rpx;
+  color:#ddd;
+  opacity: .8;
+  padding:15rpx 0;
+}
+.total-count{
+  color:#fff;
+  font-weight:bold;
+  font-size:50rpx;
+  padding:10rpx 0 60rpx;
+}
+.example,.example-box{
+  width:calc(100% - 40rpx);
+  padding:40rpx 20rpx;
+  position:relative;
+  top:-40rpx;
+  background:#fff;
+  border-top-left-radius:20rpx;
+  border-top-right-radius:20rpx;
+}
+.example-box{
+  height:300rpx;
+  text-align: center;
+  line-height: 300rpx;
+  color:#888E96;
+}
+.example-title{
+  height:100rpx;
+  line-height: 100rpx;
+  color:#393939;
+
+}
+.example-context{
+  width:100%;
+}
+.content{
+  width:100%;
+  height: 100rpx;
+}
+.item-img{
+  width:30%;
+  height:100%;
+  display: flex;
+}
+.item-message{
+  width:70%;
+  height:100%;
+  line-height: 100rpx;
+  display: flex;
+}
+.index{
+  width:60rpx;
+  height:100%;
+  color:#313131;
+  line-height: 100rpx;
+  font-size:32rpx;
+}
+.images{
+  width:50rpx;
+  height:50rpx;
+  border-radius:50%;
+  overflow: hidden;
+  padding:15rpx;
+  border:1px solid #19ab83;
+  margin-top:10rpx;
+}
+.item-type{
+  width:50%;
+  text-align: left;
+  
+}
+.item-money{
+  width:50%;
+  text-align: right;
+  
+}
+.num-text{
+  font-size:27rpx;
+  margin-left:20rpx;
+  color:#B4B4B4;
+}

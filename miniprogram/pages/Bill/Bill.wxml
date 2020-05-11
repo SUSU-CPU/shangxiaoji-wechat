@@ -1,0 +1,56 @@
+<view class="Bill">
+	<!-- 导航 -->
+	<view class="nav">
+		<view class="nav-box">
+			<view class="mouth-bill" wx:for="{{billType}}" wx:key="index">
+				<text class="{{item.isActive?'active':''}} nav-text" data-active = "{{item.isActive}}" data-index = "{{index}}" data-type = "{{item.type}}" data-name = "billType"  bindtap="switchTab">{{item.name}}</text>
+			</view>
+			<!-- <view class="year-bill"><text class="nav-text">年账单</text></view> -->
+		</view>
+	</view>
+
+	<!-- 账单数据统计 -->
+	<view class="bill-data">
+		<view class="bill-type clear">
+			<view class="check-time fl">
+				<view class="time-text">
+					<picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+						<text>{{billData.time}}</text><text class="time-icon"></text>
+					</picker>
+				</view>
+			</view>
+			<view class="check-type fr">
+				<view class="type-title" wx:for="{{consumeType}}" wx:key="index">
+					<text class="type-name  {{item.isActive?'active':''}}" data-active = "{{item.isActive}}" data-index = "{{index}}" data-type = "{{item.type}}" data-names = "{{item.name}}" data-name = "consumeType"  bindtap="switchTab">{{item.name}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="bill-total">
+			<view class="total-title">
+				共{{billData.comsumetypetext}}{{billData.index}}笔合计
+			</view>
+			<view class="total-count">
+				￥{{billData.total}}
+			</view>
+		</view>
+	</view>
+
+	<view class="example" wx:if="{{notHavaData}}">
+		<view class="example-title" >{{billData.comsumetypetext}}排行榜</view>
+		<view class="example-context">
+			<view class="content clear" wx:for="{{billData.billList}}" data-name = "{{item.consume}}" data-item_id = "{{item.item_id}}" wx:key="index" bindtap="goPage">
+				<view class="item-img fl">
+					<text class="index">{{index+1}}</text>
+					<view class="images">
+						<image src="{{item.consumeUrl}}" class="auto-img" mode="widthFix"></image>
+					</view>
+				</view>
+				<view class="item-message fr">
+					<view class="item-type">{{item.consume}}</view>
+					<view class="item-money">￥{{item.count}}<text class="num-text">x{{item.num}}笔</text></view>
+				</view>
+			</view>
+		</view>
+	</view>
+		<view class="example-box" wx:else>没有数据!先去记一笔吧~</view>
+</view>

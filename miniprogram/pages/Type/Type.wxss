@@ -1,0 +1,64 @@
+/* miniprogram/pages/Type/Type.wxss */
+.detail{
+  width:100%;
+  padding:20rpx 0;
+  background:#fff;
+}
+.day-dill{
+  width:calc(100% - 20rpx0);
+  padding:15rpx 20rpx;
+  border-bottom:1px solid #ddd;
+}
+.item-text{
+  font-size:26rpx;
+  color: #767676;
+}
+.dill-text{
+  margin-left: 40rpx;
+}
+.detail-box{
+  width:calc(100% - 40rpx);
+  padding:15rpx 20rpx;
+  background:#fff;
+  border-bottom:1px solid #ddd;
+}
+.dill-detail{
+  width:calc(100% - 40rpx);
+  height:calc(100% - 110rpx);
+  padding:15rpx 20rpx;
+  overflow-y: auto;
+}
+.type-img{
+  width:60rpx;
+  height:60rpx;
+  padding:10rpx;
+  border-radius: 50%;
+  border:1px solid #19ab83;
+}
+.type-text{
+  margin-left:20rpx;
+  font-size:32rpx;
+}
+.type-remark{
+  color:#525252;
+  margin-left:20rpx;
+  font-size:27rpx;
+}
+.describe .active{
+  line-height: 42px;
+}
+
+.income{
+  color:#19ab83;
+}
+.expend{
+  color: #767676;
+}
+.dill-money{
+  padding:20rpx 0;
+}
+.account-time{
+  font-size:26rpx;
+  color:#767676;
+  margin-left:20rpx;
+}

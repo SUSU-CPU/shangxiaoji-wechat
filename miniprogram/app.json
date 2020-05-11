@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/Add/Add",
+    "pages/Detail/Detail",
+    "pages/Chart/Chart",
+    "pages/Bill/Bill",
+    "pages/My/My",
+    "pages/Type/Type",
+    "pages/Accredit/Accredit",
+    "pages/Order/Order"
+    
+  ],
+  "tabBar": {
+    "color": "#545454",
+    "borderStyle": "black",
+    "selectedColor": "#19ab83",
+    "list": [
+      {
+        "pagePath": "pages/Detail/Detail",
+        "text": "明细",
+        "iconPath": "./images/detail.png",
+        "selectedIconPath": "./images/detail_active.png"
+      },
+      {
+        "pagePath": "pages/Chart/Chart",
+        "text": "图表",
+        "iconPath": "./images/chart.png",
+        "selectedIconPath": "./images/chart_active.png"
+      },
+      {
+        "pagePath": "pages/Add/Add",
+        "text": "记账",
+        "iconPath": "./images/add_active.png",
+        "selectedIconPath": "./images/add_active.png"
+      },
+      {
+        "pagePath": "pages/Bill/Bill",
+        "text": "账单",
+        "iconPath": "./images/bill.png",
+        "selectedIconPath": "./images/bill_active.png"
+      },
+      {
+        "pagePath": "pages/My/My",
+        "text": "我的",
+        "iconPath": "./images/my.png",
+        "selectedIconPath": "./images/my_active.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#19ab83",
+    "navigationBarTitleText": "商小记",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

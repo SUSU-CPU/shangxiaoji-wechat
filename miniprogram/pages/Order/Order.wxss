@@ -1,0 +1,79 @@
+/* miniprogram/pages/Order/Order.wxss */
+.order-list{
+  width:calc(100% - 40rpx);
+  padding:20rpx;
+  border-bottom:1px solid #ddd;
+}
+.order-left{
+  width:70%;
+  height: 100rpx;
+  padding:20rpx;
+  
+  display: flex;
+}
+.order-text{
+  width:70%;
+  height:100%
+}
+.order-img{
+  width:80rpx;
+  height:80rpx;
+  border-radius:50%;
+  overflow: hidden;
+  padding:10rpx;
+  border:1px solid #19ab83;
+  margin-right:30rpx;
+}
+.order-text{
+  height:100%;
+  line-height: 50rpx;
+}
+.title,.text{
+  height:50%;
+}
+.order-right{
+  line-height: 140rpx;
+  font-size:34rpx;
+  color:#3E3E3E;
+}
+.active{
+  color:#19ab83;
+}
+.time-text{
+  margin-left:15rpx;
+  color:#AFAFAF;
+  font-size:28rpx;
+}
+.text{
+  color:#AFAFAF;
+  font-size:30rpx;
+}
+.delete{
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,.3)
+}
+.delete-box{
+  width:300rpx;
+  height:80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size:34rpx;
+  background:#fff;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+}
+.notHaveData{
+  width:100%;
+  height: 400rpx;
+  text-align: center;
+  line-height: 400rpx;
+  color: #3E3E3E;
+}

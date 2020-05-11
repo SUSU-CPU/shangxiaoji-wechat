@@ -1,0 +1,17 @@
+<view class="detail">
+			<!-- 账单列表 -->
+			<view class="clear detail-box" wx:for="{{dataType}}" wx:key="index">
+				<view class="fl dill-type">
+					<view class="type-img fl">
+						<image class="auto-img" src="{{item.consumeUrl}}" mode="heightFix" mode="widthFix"></image>
+					</view>
+					<view class="describe fl">
+					<view class="type-text {{item.accountRemark==''?'active':''}}">{{item.consume}}<text class="account-time">{{item.accountTime}}</text></view>
+					<view class="type-remark">{{item.accountRemark}}</view>
+					</view>
+				</view>
+				<view class="fr dill-money">
+					<text class="type-text {{item.accountType == 'zhichu'?'expend':'income'}}"> {{item.accountType == 'zhichu'?'-':'+'}}￥{{item.accountMoney}}</text>
+				</view>
+			</view>
+		</view>

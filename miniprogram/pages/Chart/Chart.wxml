@@ -1,0 +1,55 @@
+<!--miniprogram/pages/Chart/Chart.wxml-->
+<view class="chart">
+	<view class="chart-nav">
+		<view class="account-type">
+			<view class="type-box">
+				<view class="type-item {{item.isActive?'active':''}} fl" wx:for="{{type}}" wx:key="index" data-active="{{item.isActive}}" data-index="{{index}}" data-type="type" bindtap="radioChange">{{item.name}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="chart-box">
+		<view class="account-time clear">
+			<view class="radio fl" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}" data-active="{{item.isActive}}" data-index="{{index}}" data-type="items" bindtap="radioChange">
+				<view class="radius-check {{item.isActive?'active':''}} fl">
+				</view>
+				<view class="fl">{{item.value}}</view>
+			</view>
+		</view>
+		<view class="pie-chart" wx:if = "{{!isNotData}}">
+				<view class="pie-canvas">
+				<canvas class="canvas" canvas-id="pieCanvas"></canvas>
+				</view>
+		</view>
+			<view class="pie-chart" wx:else >
+				<view class="notData">
+				没有记录，先去记一笔吧！
+				</view>
+		</view>
+	</view>
+	<view class="progress" wx:if = "{{!isNotData}}">
+		<view class="progress-top clear">
+		<text class="fl">排行榜</text>
+		<text class="total fr">￥{{seriesData.total}}</text>
+		</view>
+		<view class="progress-bottom clear" wx:for="{{series}}" wx:key = "index">
+			<view class="left-img fl" >
+				<image class="auto-img" src="{{item.url}}" mode="widthFix"></image>
+			</view>
+			<view class="right-content fr" >
+				<view class="progress-title">
+					<view class="progress-type">
+						{{item.name}} {{item.rat}}
+					</view>
+					<view class="progress-plan">
+						<view class="floor">
+							<view class="layer" style="background:{{item.color}};width:{{item.rat}};"></view>
+						</view>
+					</view>
+				</view>
+				<view class="progress-total">
+					￥{{item.money}}
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

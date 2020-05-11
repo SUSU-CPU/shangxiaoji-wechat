@@ -1,0 +1,25 @@
+<view class="order" wx:if="{{orderData.length>0}}">
+  <view class="order-list clear" wx:for="{{orderData}}" wx:key= "index" data-id = "{{item._id}}" bindlongtap="longClick">
+    <view class="order-left fl">
+      <view class="order-img">
+        <image src="{{item.consumeUrl}}" class="auto-img" mode="widthFix"></image>
+      </view>
+      <view class="order-text">
+        <view class="title">
+          <text class="typeText">{{item.consume}}</text>
+          <text class="time-text">{{item.accountTime}}</text>
+        </view>
+        <view class="text">{{item.accountRemark}}</view>
+      </view>
+    </view>
+    <view class="order-right fr {{item.accountType == 'zhichu'?'':'active'}}">
+    {{item.accountType == "zhichu"?'-':'+'}}{{item.accountMoney}}
+    </view>
+  </view>
+  <!-- <view class="text-footer" wx:if="{{!more}}">没有更多数据！！！</view> -->
+  <!-- <view class="text-footer" wx:else>加载中</view> -->
+</view>
+<view class="notHaveData" wx:else>没有账单数据，快去记一笔吧！</view>
+<view class="delete" style="display:{{isDisplay}};" bindtap="closeDeleteBox">
+  <view class="delete-box" bindtap="deleteOrder">删除</view>
+</view>

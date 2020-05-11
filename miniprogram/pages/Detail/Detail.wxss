@@ -1,0 +1,112 @@
+/* miniprogram/pages/Home/Home.wxss */
+.detail{
+  height:100%;
+}
+.detail-top {
+  width: calc(100% - 40rpx);
+  background:#19ab83;
+  padding:20rpx;
+  display: block;
+}
+.date{
+  width:25%;
+}
+.bill{
+  width:75%;
+  display: flex;
+}
+.bill >view{
+  width:calc(50% - 40rpx);
+  padding:0 20rpx; 
+  overflow: hidden;
+}
+.top-text{
+  font-size:30rpx;
+  color:#E5EAEA;
+}
+.bottom-text{
+  font-size:44rpx;
+  color:#E5EAEA;
+  margin-top:10rpx;
+}
+.arrows{
+  display: inline-block;
+  margin-left:15rpx;
+  border-top: 15rpx solid #E5EAEA;
+  border-bottom: 20rpx solid transparent;
+  border-left: 15rpx solid transparent;
+  border-right: 15rpx solid transparent;
+  position: relative;
+  top:15rpx;
+}
+.icon{
+  display: inline-block;
+  width:1px;
+  height: 20px;
+  background:#E5EAEA;
+  position: absolute;
+  bottom:15rpx;
+}
+/* 日账单 */
+.detail-bottom{
+  width:100%;
+  height:calc(100% - 140rpx);
+}
+.day-dill{
+  width:calc(100% - 20rpx0);
+  padding:15rpx 20rpx;
+  border-bottom:1px solid #ddd;
+}
+.item-text{
+  font-size:26rpx;
+  color: #767676;
+}
+.dill-text{
+  margin-left: 40rpx;
+}
+.detail-box{
+  padding:15rpx 0;
+}
+.dill-detail{
+  width:calc(100% - 40rpx);
+  height:calc(100% - 110rpx);
+  padding:15rpx 20rpx;
+  overflow-y: auto;
+}
+.type-img{
+  width:60rpx;
+  height:60rpx;
+  padding:10rpx;
+  border-radius: 50%;
+  border:1px solid #19ab83;
+}
+.type-text{
+  margin-left:20rpx;
+  font-size:32rpx;
+}
+.type-remark{
+  color:#525252;
+  margin-left:20rpx;
+  font-size:27rpx;
+}
+.describe .active{
+  line-height: 42px;
+}
+
+.income{
+  color:#19ab83;
+}
+.expend{
+  color: #767676;
+}
+.dill-money{
+  padding:20rpx 0;
+}
+
+.dill-detail-box{
+  width:100%;
+  height:400rpx;
+  text-align: center;
+  line-height: 400rpx;
+  color:#888E96;
+}

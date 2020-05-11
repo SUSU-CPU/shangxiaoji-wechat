@@ -1,0 +1,63 @@
+<!--miniprogram/pages/Home/Home.wxml-->
+<view class="detail">
+	<!-- 月账单 -->
+	<view class="detail-top clear">
+		<view class="fl date">
+			<view class="top-text">{{data.year}}</view>
+			<view class="bottom-text">
+				<picker mode="date" value="{{date}}" start="{{opitionDate.start}}" end="{{opitionDate.end}}" bindchange="bindDateChange">
+					<text>{{data.mouth}}月</text>
+					<text class="arrows">
+            </text>
+				</picker>
+			</view>
+		</view>
+		<view class="icon"></view>
+		<view class="fl bill">
+			<view class="expend">
+				<view class="top-text">支出</view>
+				<view class="bottom-text">
+					<text class="text">{{mouthAccounts.expend}}</text>
+				</view>
+			</view>
+			<view class="income">
+				<view class="top-text">收入</view>
+				<view class="bottom-text">
+					<text class="text">{{mouthAccounts.income}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 日账单 -->
+	<view class="detail-bottom">
+		<view class="day-dill clear">
+			<view class="item-time fl">
+				<text class="item-text">{{data.mouth}}-{{data.day}}日 {{data.week}}</text>
+			</view>
+			<view class="item-dill fr">
+				<text class="item-text">月支出:{{dayAccounts.expend}}</text>
+				<text class="item-text dill-text">月收入:{{dayAccounts.income}}</text>
+			</view>
+		</view>
+		<view class="dill-detail" wx:if="{{isNotData}}">
+			<!-- 账单列表 -->
+			<view class="clear detail-box" wx:for="{{accountDetailData}}" wx:key="index">
+				<view class="fl dill-type">
+					<view class="type-img fl">
+						<image class="auto-img" src="{{item.consumeUrl}}" mode="heightFix" mode="widthFix"></image>
+					</view>
+					<view class="describe fl">
+					<view class="type-text {{item.accountRemark==''?'active':''}}">{{item.consume}}</view>
+					<view class="type-remark">{{item.accountRemark}}</view>
+					</view>
+				</view>
+				<view class="fr dill-money">
+					<text class="type-text {{item.accountType == 'zhichu'?'expend':'income'}}">{{item.accountType == 'zhichu'?'-':'+'}}￥{{item.accountMoney}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="dill-detail-box" wx:else>
+		没有数据，先去记一笔吧！！
+		</view>
+	</view>
+</view>

@@ -1,0 +1,128 @@
+/* miniprogram/pages/My/My.wxss */
+.myData{
+  height:100%;
+  background-color:#fff;
+}
+.header{
+  width:calc(100% - 40rpx);
+  height:380rpx;
+  padding:20rpx;
+  background:#19AB83;
+}
+.user-img{
+ width:100%;
+ height:150rpx;
+ margin:70rpx 0 10rpx;
+
+}
+.img{
+  width:140rpx;
+  height:140rpx;
+  margin:0 auto;
+  border-radius:50%;
+  overflow: hidden;
+  background:#ddd;
+}
+.user-name{
+  text-align: center
+}
+.user-operate{
+  width:100%;
+  background:#fff;
+  position:relative;
+  top:-40rpx;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+}
+.operate-list{
+  width:calc(100% - 40rpx);
+  height:120rpx;
+  padding:20rpx 20rpx 0;
+  display: flex;
+
+}
+.list-item{
+  width:calc(100% / 3);
+  height:100%;
+  text-align: center;
+}
+.list-title,.list-count{
+  height:50%;
+  line-height: 60rpx;
+}
+.list-count{
+  font-size:42rpx;
+
+}
+.list-title{
+  font-size:27rpx;
+  color:#909090;
+}
+.user-bottom{
+  width: calc(100% - 160rpx);  
+padding:0 80rpx;
+margin-top:-40rpx;
+}
+.sign-in{
+  padding: 30rpx 0;
+  background:#fff;
+  color:#909090;
+  border-bottom:1px solid #ddd
+}
+.sign-text{
+  font-size:34rpx;
+}
+.sign-icon{
+  /* font-size:34rpx; */
+  /* display: inline-block; */
+  margin-top:10rpx;
+  width:35rpx;
+  height:35rpx;
+}
+.pop-window{
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.4);
+  position:fixed;
+  top:0;
+  left:0;
+  transition: opacity .5s;
+  z-index: -1;
+}
+.pop-box{
+  width:400rpx;
+  height:200rpx;
+  background:#fff;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.title{
+  text-align: center;
+  width:100%;
+  height:130rpx;
+  font-weight:bold;
+  line-height: 130rpx;
+}
+.button{
+  display: flex;
+  height:70rpx;
+  width:100%;
+}
+.btn{
+  width:50%;
+  height:70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  position: absolute;
+  bottom:0;
+  border-top:1px solid #ddd;
+}
+.confirm{
+  background-color: #19AB83;
+  color:#fff;
+  right:0;
+}
